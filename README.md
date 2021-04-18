@@ -31,9 +31,7 @@ We will cover:
 
         `npm run build-prod`
 
-
-        then 
-
+   then 
 
         `npm run start`
 
