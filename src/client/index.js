@@ -1,5 +1,7 @@
 import {
-    handleSubmit
+    handleSubmit,
+    validateURL,
+    checkInput
 } from './js/formHandler'
 
 import './styles/resets.scss'

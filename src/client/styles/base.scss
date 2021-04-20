@@ -13,4 +13,16 @@ section {
     margin: 50px auto;
     justify-content: center;
     align-items: center;
+
+    #results {
+        margin-top: 20px;
+
+        span {
+            padding: 5px;
+            margin: 20px 5px;
+            border: 1px solid rgba(128, 128, 128, 0.2);
+            border-radius: 7px;
+            background-color: rgba(182, 182, 182, 0.1);
+        }
+    }
 }

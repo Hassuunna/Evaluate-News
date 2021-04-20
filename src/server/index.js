@@ -27,11 +27,10 @@ app.post("/analyze", (req, res) => {
     request(options, function (error, response) {
         if (error) throw new Error(error);
         let result = JSON.parse(response.body);
-        let concepts = 'concepts are: '
-        result.sentimented_concept_list.forEach(element => {
-            concepts += element.form + ", "
-        })
-        res.send(concepts)
+        result = [
+            result.subjectivity, result.confidence, result.agreement, result.irony, result.score_tag
+        ];
+        res.send(result)
     });
 })
 
