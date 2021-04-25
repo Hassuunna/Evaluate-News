@@ -25,7 +25,10 @@ app.post("/analyze", (req, res) => {
     };
 
     request(options, function (error, response) {
-        if (error) throw new Error(error);
+        if (error) {
+            console.log('Error in API', error);
+            res.sendStatus(404)
+        }
         let result = JSON.parse(response.body);
         result = [
             result.subjectivity, result.confidence, result.agreement, result.irony, result.score_tag
